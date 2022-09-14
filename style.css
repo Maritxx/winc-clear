@@ -1,0 +1,436 @@
+/*Global Styling*/
+.fourteenForty {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.twelveHundred {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tenEighty {
+    position: relative;
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.nineSixty {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.imgHolder img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+
+
+
+  /*Font Styling*/
+h1 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;  
+    text-align: center; 
+}
+
+h3 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+.exercise-info__heading {
+    display: block;
+    font-weight: 700;
+}
+
+
+
+
+ /*Header Styling*/
+header {
+    padding: 30px;
+}
+
+.header-image__holder {
+    max-width: 70px;
+    margin: 20px auto;
+}
+ 
+.header-navigation__holder > ul { 
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 15px
+}
+
+.header-navigation__holder a {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 25px;
+    background-color: var(--button-primary);
+    font-weight: 700;
+}
+
+
+
+
+/*Homepage Styling*/
+/*Hero Section*/
+.hero__section {
+text-align: center;
+margin-top: 100px;
+padding-left: 30px;
+}
+
+.hero-text__holder {
+    padding: 30px;
+}
+
+.hero-image__holder img {
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: 0;
+    width: calc(100vw - 50px);
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+
+
+
+/*Archive Section*/
+.archive__section { 
+    margin-top: 100px;
+    padding: 15px;
+}
+
+.archive-box__container {
+    overflow: hidden;
+    border-radius: 25px;    
+}
+
+.archive-content__holder {
+    background-color: var(--container-primary);
+    padding: 30px;
+}
+
+.archive-image__holder img { 
+    border-radius: 25px;
+    border: 3px solid var(--bg-primary);
+    max-width: 250px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.archive-text__holder { /*FIX PADDING FOR TEXT BOX. Max-width 300px + margin 0 auto??*/
+    text-align: center;
+}
+
+.button a {
+    display: inline-block;
+    padding: 5px 25px;
+    border-radius: 25px;
+    background-color: var(--button-primary);
+    font-weight: 700;
+}
+
+
+
+
+
+/*Review Section*/
+.review__section {
+    margin-top: 100px;
+    padding: 15px;
+}
+
+.review-content__container {
+    text-align: center;
+    margin: 0px auto 100px auto;
+    max-width: 350px;
+}
+
+.review-image__holder img {
+    margin: 0 auto;
+}
+
+
+
+
+/*Recreant Page Styling*/
+/*Exercise Section*/
+.recreant-exercises__section {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 100px;
+}
+
+.exercise-box__holder { /*Max-width on this section just for mobile?*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto) 50px;
+    grid-template-areas: 
+    "title title title"
+    "info info info"
+    "text text text"
+    ". img ."
+    "cat cat cat";
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.exercise-box__holder > h2 {
+    grid-area: title;
+    padding-bottom: 15px;
+}
+
+.exercise-text__holder {
+    grid-area: text;
+    padding: 15px 0px;
+}
+
+.exercise-info__holder { 
+    grid-area: info;
+    padding: 30px;
+    height: fit-content;
+    border-radius: 25px;
+    background-color: var(--container-secondary); /*MAKE LIST OF COLORS OF CATEGORIES AND APPLY CONSISTENTLY*/
+}
+
+.exercise-image__holder {
+    grid-area: img;
+    display: flex;
+    align-items: flex-end;
+}
+
+.exercise-image__holder img { 
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.exercise-category__holder {
+    grid-area: cat;
+    background-color: var(--container-primary);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+
+
+
+
+
+/*Footer Styling*/
+.footer__text {
+    display: block;
+    text-align: center;
+    padding: 30px;
+}
+
+
+
+
+/*Media Queries*/
+@media screen and (min-width: 768px) {
+    /*Fonts Styling*/
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+
+    /*Header Styling*/
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-image__holder {
+        margin: unset;
+    }
+
+    .header-navigation__holder > ul {
+        justify-content: space-between;
+    }
+    
+
+    
+    /*Homepage Styling*/
+    /*Hero Section*/
+    .hero__section {
+        display: flex;
+        column-gap: 30px;
+    }
+
+    .hero-text__holder {
+        padding: unset;
+        padding-top: 5%;
+    }
+
+
+    /*Archive Section*/
+    .archive-content__holder {
+        display: flex;
+        column-gap: 30px;
+        justify-content: space-between;
+    }
+
+    .archive-content__holder--reverse {
+        flex-direction: row-reverse;
+    }
+
+    .archive-image__holder {
+        flex: 0 1 40%;
+    }
+
+    .archive-image__holder img {
+        max-width: 100%;
+    }
+
+    .archive-text__holder {
+        flex: 0 1 60%;
+    }
+
+
+    /*Review Section*/
+    .review__section {
+        display: grid;
+        grid-template: repeat(2, auto) / repeat(3, 1fr);
+        grid-column-gap: 30px;
+    }
+
+    .review__section h2 {
+        grid-column: 1 / -1;
+    }
+
+
+    /*Recreant Page Styling*/
+    /*Exercise Section*/
+    .exercise-box__holder { 
+        max-width: unset;
+        grid-template-columns: minmax(auto, 200px) repeat(2, 1fr);
+        grid-template-rows: repeat(5, auto) 50px;
+        grid-column-gap: 30px;
+        grid-template-areas: 
+        ". title title"
+        ". info info"
+        "img info info"
+        "img text text"
+        "img text text"
+        "cat cat cat";
+    }
+
+    .exercise-category__holder {
+        border-top-left-radius: unset;
+    }
+}
+
+
+
+
+@media screen and (min-width: 1024px) {
+    /*Homepage Styling*/
+    /*Hero Section*/
+    .hero__section {
+        padding: 15px;
+        column-gap: 50px;
+    }
+
+    .hero-text__holder {
+        flex: 0 1 40%;
+        padding-top: 8%;
+    }
+
+    .hero-image__holder {
+        position: relative;
+        flex: 0 1 60%;
+    } 
+
+    .hero-image__holder::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        background-color: var(--container-secondary);
+        width: 15%;
+        height: 100%;
+        right: 0;
+        top: 0;
+        border-radius: 25px;
+    }
+
+    .hero-image__holder img {
+        width: unset;
+        max-width: 90%;
+        margin: 20px 30px;
+        border-radius: 25px;
+    } 
+
+
+    /*Archive Section*/
+    .archive-box__container {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 75px; 
+    }
+
+    .archive-content__holder {
+        flex: 0 1 50%;
+        border-radius: 25px;
+    }
+
+
+    /*Recreant Page Styling*/
+    /*Exercise Section*/
+    .exercise-box__holder {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, auto) 75px 50px;
+        grid-template-areas: 
+        ". title title info info"
+        "img text text info info"
+        "img text text . ."
+        "cat cat cat cat cat";
+    }
+
+    .exercise-box__holder > h2 {
+        text-align: left;
+    }
+}
