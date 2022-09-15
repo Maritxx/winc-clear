@@ -59,6 +59,7 @@
   
   button {
     outline: 0;
+    color: inherit;
   }
   
   q {
@@ -66,10 +67,14 @@
     font-style: italic;
   }
   
-  textarea, input[type="text"], input[type="button"], input[type="submit"], input[type="reset"], input[type="search"], input[type="password"] input[type="number"] {
+  textarea, input[type="text"], input[type="button"], input[type="submit"], input[type="reset"], input[type="search"], input[type="password"] input[type="number"], input[type="email"] {
     -webkit-appearance: none;
     appearance: none;
+    font-family: inherit;
     border-radius: 0;
+    border: 2px solid transparent;
+    outline: none;
+    resize: none;
   }
   
   input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {

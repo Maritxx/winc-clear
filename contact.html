@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="img/png" sizes="32x32" href="img/Logo2.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/7b829ce025.js" crossorigin="anonymous"></script>
+
+    <title>CLEAR! | Contact</title>
+</head>
+
+<body>
+    <header class="tenEighty">
+        <!--CHANGE TO TWELVEHUNDRED??-->
+        <div class="header-image__holder imgHolder">
+            <img src="img/Logo2.png" alt="CLEAR! Logo">
+        </div>
+
+        <nav class="header-navigation__holder">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recreant.html">Recreant</a></li>
+                <li><a href="#">Competitie</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-info__section twelveHundred">
+            <div class="contact-info__holder">
+                <div class="contact-form__holder">
+                    <h1>Neem contact met ons op!</h1> <!--Needs to be smaller font-->
+                    <p>Heb je een suggestie, vraag Of wil je om een andere reden contact met ons opnemen? Je kunt
+                        gebruik maken van het onderstaande contactformulier!</p>
+                    
+                    <form method="POST" name="contact" data-netlify="true"> <!--Add Required on inputs for form submits-->
+                        <div class="contact-category__holder">
+                            <label for="contactcategory">Waarover wil je contact opnemen?</label>
+
+                            <div class="contact-category__holder--inputs">
+                                <input type="radio" name="contactcategory" value="suggestie">
+                                <label for="suggestie">Suggestie</label>
+
+                                <input type="radio" name="contactcategory" value="vraag">
+                                <label for="vraag">Vraag</label>
+
+                                <input type="radio" name="contactcategory" value="overig">
+                                <label for="vraag">Overig</label>
+                            </div>
+                        </div>
+
+                        <div class="contact-user-info__holder"> <!--Grid-->
+                            <input type="text" name="firstname" placeholder="Voornaam">
+
+                            <input type="text" name="lastname" placeholder="Achternaam">
+
+                            <input type="email" name="email" placeholder="E-mailadres">
+
+                            <textarea rows="5" name="contactmessage" placeholder="Schrijf hier je bericht..."></textarea>
+                        </div>
+
+                        <button type="submit">Verstuur Bericht</button>
+                    </form>
+                </div>
+
+                <div class="site-info__holder">
+                    <div class="site-info__holder--image imgHolder">
+                        <img src="img/heading__stock2.jpg" alt="">
+                    </div>
+                    <div class="site-info__holder--content">
+                        <div class="contact-info__holder--phone"> <!--add fontawesome Icon via ::after?-->
+                            <span class="contact-info__heading">Bel ons op...</span>
+                            <span class="contact-info__text">06-11111112</span>
+                        </div>
+                        
+                        <div class="contact-info__holder--email"> <!--add fontawesome Icon via ::after?-->
+                            <span class="contact-info__heading">Mail naar...</span>
+                            <span class="contact-info__text">info@thisisfake.com</span>
+                        </div>
+
+                        <hr>
+                        <div class="site-socials__holder">
+                            <a href="#"><i class="fa-brands fa-facebook" title="Link to our Facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter" title="Link to our Twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram" title="Link to our Instagram"></i></a>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <span class="footer__text"><strong>CLEAR! 2022</strong> | All Rights Reserved</span>
+    </footer>
+</body>
+
+</html>

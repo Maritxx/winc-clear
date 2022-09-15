@@ -60,13 +60,23 @@ h2 {
 h3 {
     font-family: var(--font-heading);
     font-weight: 700;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
 }
 
 .exercise-info__heading {
     display: block;
     font-weight: 700;
+}
+
+.contact-info__heading {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.contact-info__text {
+    font-size: 0.8rem;
 }
 
 
@@ -152,6 +162,10 @@ padding-left: 30px;
 
 .archive-text__holder { /*FIX PADDING FOR TEXT BOX. Max-width 300px + margin 0 auto??*/
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 15px;
 }
 
 .button a {
@@ -176,6 +190,9 @@ padding-left: 30px;
     text-align: center;
     margin: 0px auto 100px auto;
     max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
 }
 
 .review-image__holder img {
@@ -194,7 +211,7 @@ padding-left: 30px;
     row-gap: 100px;
 }
 
-.exercise-box__holder { /*Max-width on this section just for mobile?*/
+.exercise-box__holder { 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, auto) 50px;
@@ -249,6 +266,151 @@ padding-left: 30px;
 
 
 
+/*Contact Page Styling*/
+/*Form Div*/
+.contact-info__section {
+    padding: 15px;
+}
+
+.contact-info__holder {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+}
+
+.contact-category__holder {
+    border-radius: 20px;
+    border: 3px solid var(--container-secondary);
+    margin-top: 30px;
+}
+
+.contact-category__holder > label { /*STYLE LABEL TEXT*/
+    display: block;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: var(--container-secondary);
+}
+
+.contact-category__holder--inputs { 
+    padding: 15px;
+}
+
+/*Radio button Styling*/
+.contact-category__holder--inputs input {
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 50%;
+    background: var(--container-secondary);
+    border: 7px solid var(--bg-primary);
+    box-shadow: 0 0 0 2px var(--container-secondary);
+} /*BROKEN?*/
+
+.contact-user-info__holder {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.contact-user-info__holder > input, textarea {
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.contact-user-info__holder > input:hover, textarea:hover, input:focus-visible, textarea:focus-visible {
+    border: 2px solid var(--container-secondary);
+} /*MIGHT BE REASON IT BREAKS?*/
+
+.contact-form__holder button {
+    display: block;
+    margin-left: auto;
+    padding: 10px 25px;
+    margin-top: 20px;
+    border-radius: 25px;
+    background-color: var(--button-primary);
+    font-weight: 700; 
+}
+
+
+
+/*Site Info Div*/
+.site-info__holder {
+    border-radius: 25px;
+    overflow: hidden;
+    background: var(--container-primary);
+}
+
+.site-info__holder--content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 15px;
+}
+
+.contact-info__holder--phone, .contact-info__holder--email {
+    position: relative;
+    padding: 15px 30px;
+    max-width: 300px;
+    width: 100%;
+    border-radius: 25px;
+    background-color: var(--text-primary);
+    color: var(--bg-primary);
+    border: 2px solid var(--bg-primary);
+    align-self: center;
+}
+
+.contact-info__holder--phone::after {
+    content: "\f095";
+    position: absolute;
+    right: 30px;
+    top: calc(50% - 19px);
+    font-family: FontAwesome;
+    color: var(--text-primary);
+    padding: 10px;
+    border-radius: 45px;
+    background-color: var(--container-secondary);
+}
+
+.contact-info__holder--email::after {
+    content: "\f0e0";
+    position: absolute;
+    right: 30px;
+    top: calc(50% - 19px);
+    font-family: FontAwesome;
+    color: var(--text-primary);
+    padding: 10px;
+    border-radius: 45px;
+    background-color: var(--container-secondary);
+}
+
+.site-info__holder--content > hr {
+    width: 100%;
+    height: 3px;
+    border: 0px;
+    background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(229,77,40,1), rgba(186,48,113,1), rgba(0,0,0,0));
+}
+
+.site-socials__holder {
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+    font-size: 2rem;
+}
+
+.site-socials__holder i {
+    border-radius: 45px;
+    color: var(--button-primary);
+    background-color: var(--text-primary);
+    border: solid 5px var(--text-primary);
+}
+
+
+
+
 
 
 /*Footer Styling*/
@@ -264,10 +426,6 @@ padding-left: 30px;
 /*Media Queries*/
 @media screen and (min-width: 768px) {
     /*Fonts Styling*/
-    h1 {
-        font-size: 4rem;
-    }
-
     h2 {
         font-size: 1.5rem;
     }
@@ -299,6 +457,10 @@ padding-left: 30px;
     .hero__section {
         display: flex;
         column-gap: 30px;
+    }
+
+    .hero__section h1 {
+        font-size: 4rem;
     }
 
     .hero-text__holder {
@@ -362,12 +524,38 @@ padding-left: 30px;
     .exercise-category__holder {
         border-top-left-radius: unset;
     }
+
+
+    /*Contact Page Styling*/
+    /*Form Div*/
+    .contact-info__holder {
+        column-gap: 50px;
+        flex-direction: row;
+        max-width: unset;
+    }
+
+    .contact-form__holder {
+        flex: 0 1 50%;
+    }
+
+
+    /*Site Info Div*/
+    .site-info__holder {
+        flex: 0 1 50%;
+        align-self: center;
+    }
+    
 }
 
 
 
 
 @media screen and (min-width: 1024px) {
+    /*Fonts Styling*/
+    h1 {
+        font-size: 2.5rem;
+    }
+
     /*Homepage Styling*/
     /*Hero Section*/
     .hero__section {
@@ -432,5 +620,28 @@ padding-left: 30px;
 
     .exercise-box__holder > h2 {
         text-align: left;
+    }
+
+
+
+    /*Contact Page Styling*/
+    /*Form Styling*/
+    .contact-info__holder {
+        column-gap: 100px;
+    }
+
+    .contact-user-info__holder {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+    }
+
+    .contact-user-info__holder > input[type="email"] {
+        grid-column: 1 / 3;
+        grid-row-start: 2;
+    }
+
+    .contact-user-info__holder > textarea {
+        grid-column: 1 / 3;
+        grid-row-start: 3;
     }
 }
