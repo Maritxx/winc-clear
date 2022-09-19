@@ -52,7 +52,7 @@ h1 {
 h2 {
     font-family: var(--font-heading);
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-transform: uppercase;  
     text-align: center; 
 }
@@ -257,6 +257,9 @@ padding-left: 30px;
     height: fit-content;
     border-radius: 25px;
     background-color: var(--container-secondary); 
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
 }
 
 .exercise-image__holder {
