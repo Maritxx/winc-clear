@@ -18,8 +18,7 @@
 </head>
 
 <body>
-    <header class="tenEighty">
-        <!--CHANGE TO TWELVEHUNDRED??-->
+    <header class="twelveHundred">
         <div class="header-image__holder imgHolder">
             <img src="img/Logo2.png" alt="CLEAR! Logo">
         </div>
@@ -38,34 +37,40 @@
         <section class="contact-info__section twelveHundred">
             <div class="contact-info__holder">
                 <div class="contact-form__holder">
-                    <h1>Neem contact met ons op!</h1> <!--Needs to be smaller font-->
+                    <h1>Neem contact met ons op!</h1> 
                     <p>Heb je een suggestie, vraag Of wil je om een andere reden contact met ons opnemen? Je kunt
                         gebruik maken van het onderstaande contactformulier!</p>
                     
-                    <form method="POST" name="contact" data-netlify="true"> <!--Add Required on inputs for form submits-->
+                    <form method="POST" name="contact" data-netlify="true"> 
                         <div class="contact-category__holder">
                             <label for="contactcategory">Waarover wil je contact opnemen?</label>
 
                             <div class="contact-category__holder--inputs">
-                                <input type="radio" name="contactcategory" value="suggestie">
-                                <label for="suggestie">Suggestie</label>
+                                <div class="radio-input__holder">
+                                    <input type="radio" name="contactcategory" value="suggestie" required>
+                                    <label for="suggestie">Suggestie</label>
+                                </div>
 
-                                <input type="radio" name="contactcategory" value="vraag">
-                                <label for="vraag">Vraag</label>
+                                <div class="radio-input__holder">
+                                    <input type="radio" name="contactcategory" value="vraag" required>
+                                    <label for="vraag">Vraag</label>
+                                </div>
 
-                                <input type="radio" name="contactcategory" value="overig">
-                                <label for="vraag">Overig</label>
+                                <div class="radio-input__holder">
+                                    <input type="radio" name="contactcategory" value="overig" required>
+                                    <label for="vraag">Overig</label>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="contact-user-info__holder"> <!--Grid-->
-                            <input type="text" name="firstname" placeholder="Voornaam">
+                        <div class="contact-user-info__holder"> 
+                            <input type="text" name="firstname" placeholder="Voornaam" required>
 
-                            <input type="text" name="lastname" placeholder="Achternaam">
+                            <input type="text" name="lastname" placeholder="Achternaam" required>
 
-                            <input type="email" name="email" placeholder="E-mailadres">
+                            <input type="email" name="email" placeholder="E-mailadres" required>
 
-                            <textarea rows="5" name="contactmessage" placeholder="Schrijf hier je bericht..."></textarea>
+                            <textarea rows="5" name="contactmessage" placeholder="Schrijf hier je bericht..." required></textarea>
                         </div>
 
                         <button type="submit">Verstuur Bericht</button>
@@ -77,12 +82,12 @@
                         <img src="img/heading__stock2.jpg" alt="">
                     </div>
                     <div class="site-info__holder--content">
-                        <div class="contact-info__holder--phone"> <!--add fontawesome Icon via ::after?-->
+                        <div class="contact-info__holder--phone"> 
                             <span class="contact-info__heading">Bel ons op...</span>
                             <span class="contact-info__text">06-11111112</span>
                         </div>
                         
-                        <div class="contact-info__holder--email"> <!--add fontawesome Icon via ::after?-->
+                        <div class="contact-info__holder--email"> 
                             <span class="contact-info__heading">Mail naar...</span>
                             <span class="contact-info__text">info@thisisfake.com</span>
                         </div>

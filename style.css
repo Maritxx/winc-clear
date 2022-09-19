@@ -108,14 +108,17 @@ header {
     font-weight: 700;
 }
 
-
+.header-navigation__holder a:hover {
+    background-color: var(--button-hover);
+    transition: 0.15s ease-in;
+}
 
 
 /*Homepage Styling*/
 /*Hero Section*/
 .hero__section {
 text-align: center;
-margin-top: 100px;
+margin-top: 50px;
 padding-left: 30px;
 }
 
@@ -134,8 +137,6 @@ padding-left: 30px;
 }
 
 
-
-
 /*Archive Section*/
 .archive__section { 
     margin-top: 100px;
@@ -149,7 +150,10 @@ padding-left: 30px;
 
 .archive-content__holder {
     background-color: var(--container-primary);
-    padding: 30px;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
 }
 
 .archive-image__holder img { 
@@ -160,7 +164,7 @@ padding-left: 30px;
     margin: 0 auto;
 }
 
-.archive-text__holder { /*FIX PADDING FOR TEXT BOX. Max-width 300px + margin 0 auto??*/
+.archive-text__holder { 
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -176,14 +180,25 @@ padding-left: 30px;
     font-weight: 700;
 }
 
-
-
+.button a:hover {
+    background-color: var(--button-hover);
+    transition: 0.15s ease-in;
+}
 
 
 /*Review Section*/
 .review__section {
     margin-top: 100px;
     padding: 15px;
+}
+
+.recreant-heading__holder {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.review__section > h2 {
+    padding: 30px 0px
 }
 
 .review-content__container {
@@ -206,6 +221,7 @@ padding-left: 30px;
 /*Exercise Section*/
 .recreant-exercises__section {
     padding: 15px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     row-gap: 100px;
@@ -240,7 +256,7 @@ padding-left: 30px;
     padding: 30px;
     height: fit-content;
     border-radius: 25px;
-    background-color: var(--container-secondary); /*MAKE LIST OF COLORS OF CATEGORIES AND APPLY CONSISTENTLY*/
+    background-color: var(--container-secondary); 
 }
 
 .exercise-image__holder {
@@ -264,12 +280,11 @@ padding-left: 30px;
 }
 
 
-
-
 /*Contact Page Styling*/
 /*Form Div*/
 .contact-info__section {
     padding: 15px;
+    margin: 50px auto;
 }
 
 .contact-info__holder {
@@ -286,26 +301,34 @@ padding-left: 30px;
     margin-top: 30px;
 }
 
-.contact-category__holder > label { /*STYLE LABEL TEXT*/
+.contact-category__holder > label {
     display: block;
     padding: 15px;
     border-radius: 15px;
     background-color: var(--container-secondary);
+    font-weight: 700;
 }
 
 .contact-category__holder--inputs { 
     padding: 15px;
+    display: flex;
+    column-gap: 8%;
 }
 
 /*Radio button Styling*/
-.contact-category__holder--inputs input {
+.contact-category__holder--inputs input[type="radio"] {
     appearance: none;
     -webkit-appearance: none;
+    height: 1rem;
+    width: 1rem;
     border-radius: 50%;
-    background: var(--container-secondary);
-    border: 7px solid var(--bg-primary);
+    border: 3px solid var(--bg-primary);
     box-shadow: 0 0 0 2px var(--container-secondary);
-} /*BROKEN?*/
+} 
+
+.contact-category__holder--inputs input[type="radio"]:checked {
+    background-color: var(--container-secondary);
+}
 
 .contact-user-info__holder {
     display: grid;
@@ -322,7 +345,7 @@ padding-left: 30px;
 
 .contact-user-info__holder > input:hover, textarea:hover, input:focus-visible, textarea:focus-visible {
     border: 2px solid var(--container-secondary);
-} /*MIGHT BE REASON IT BREAKS?*/
+} 
 
 .contact-form__holder button {
     display: block;
@@ -334,6 +357,10 @@ padding-left: 30px;
     font-weight: 700; 
 }
 
+.contact-form__holder button:hover {
+    background-color: var(--button-hover);
+    transition: 0.15s ease-in;
+}
 
 
 /*Site Info Div*/
@@ -398,17 +425,20 @@ padding-left: 30px;
     display: flex;
     justify-content: center;
     column-gap: 30px;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .site-socials__holder i {
     border-radius: 45px;
     color: var(--button-primary);
     background-color: var(--text-primary);
-    border: solid 5px var(--text-primary);
+    border: solid 8px var(--text-primary);
 }
 
-
+.site-socials__holder i:hover {
+    color: var(--container-secondary);
+    transition: 0.15s ease-in;
+}
 
 
 
@@ -471,7 +501,7 @@ padding-left: 30px;
 
     /*Archive Section*/
     .archive-content__holder {
-        display: flex;
+        flex-direction: row;
         column-gap: 30px;
         justify-content: space-between;
     }
@@ -498,6 +528,7 @@ padding-left: 30px;
         display: grid;
         grid-template: repeat(2, auto) / repeat(3, 1fr);
         grid-column-gap: 30px;
+
     }
 
     .review__section h2 {
@@ -555,6 +586,7 @@ padding-left: 30px;
     h1 {
         font-size: 2.5rem;
     }
+
 
     /*Homepage Styling*/
     /*Hero Section*/
@@ -621,7 +653,6 @@ padding-left: 30px;
     .exercise-box__holder > h2 {
         text-align: left;
     }
-
 
 
     /*Contact Page Styling*/
